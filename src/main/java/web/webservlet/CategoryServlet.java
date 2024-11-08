@@ -1,4 +1,4 @@
-package com.webprog.demo1.webservlet;
+package web.webservlet;
 
 import com.webprog.demo1.service.CategoryService;
 import jakarta.servlet.ServletException;

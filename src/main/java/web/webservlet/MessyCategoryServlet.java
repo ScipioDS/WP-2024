@@ -1,4 +1,4 @@
-package com.webprog.demo1.webservlet;
+package web.webservlet;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
