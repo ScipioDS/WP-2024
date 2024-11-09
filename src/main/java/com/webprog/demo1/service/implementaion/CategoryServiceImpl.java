@@ -6,6 +6,7 @@ import com.webprog.demo1.service.CategoryService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CategoryServiceImpl implements CategoryService {
@@ -21,7 +22,7 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public Category create(String name, String description) {
+    public Optional<Category> create(String name, String description) {
         if (name == null || name.isEmpty() || description == null || description.isEmpty()) {
             throw new IllegalArgumentException();
         }
@@ -32,7 +33,7 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public Category update(String name, String description) {
+    public Optional<Category> update(String name, String description) {
         if (name == null || name.isEmpty() || description == null || description.isEmpty()) {
             throw new IllegalArgumentException();
         }

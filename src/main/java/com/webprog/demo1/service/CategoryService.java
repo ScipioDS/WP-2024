@@ -3,13 +3,14 @@ package com.webprog.demo1.service;
 import com.webprog.demo1.model.Category;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface CategoryService {
     List<Category> listCategories();
 
-    Category create(String name, String description);
+    Optional<Category> create(String name, String description);
 
-    Category update(String name, String description);
+    Optional<Category> update(String name, String description);
 
     void delete(String name);
 
