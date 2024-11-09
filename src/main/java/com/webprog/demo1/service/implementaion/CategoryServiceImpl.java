@@ -49,8 +49,18 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
+    public void deleteById(Long id) {
+        categoryRepository.deleteById(id);
+    }
+
+    @Override
     public List<Category> searchCategories(String text) {
         return categoryRepository.search(text);
+    }
+
+    @Override
+    public Optional<Category> findById(Long id) {
+        return categoryRepository.findById(id);
     }
 
 }
